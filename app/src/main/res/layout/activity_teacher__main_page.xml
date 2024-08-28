@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teacher_MainPage">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teacher_recview_mainpage"
+        android:layout_width="match_parent"
+        android:layout_height="461dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/balance"
+        app:layout_constraintEnd_toEndOf="@id/balance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomAppBar" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#FFE22A"
+        app:fabCradleMargin="20dp"
+        app:fabCradleRoundedCornerRadius="50dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu_teacher" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:layout_anchor="@id/bottomAppBar_teacher" />
+
+
+    <TextView
+        android:id="@+id/BalanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Balance: "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="21dp"
+        android:text="0.000 OMR"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintLeft_toLeftOf="@id/BalanceText"
+        app:layout_constraintTop_toTopOf="@id/BalanceText" />
+
+    <TextView
+        android:id="@+id/DebtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Debt: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/debt_balance"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="21dp"
+        android:text="0.000 OMR"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_light"
+        app:layout_constraintLeft_toLeftOf="@id/BalanceText"
+        app:layout_constraintTop_toTopOf="@id/BalanceText" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/approveShops_button"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="100dp"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:text="Approve Shops" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/createShops_button"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="100dp"-->
+    <!--        android:layout_marginTop="200dp"-->
+    <!--        android:text="Create Shops" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

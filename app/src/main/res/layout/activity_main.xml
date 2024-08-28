@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ABAPAY"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0C8AC5"
+        android:fontFamily="sans-serif-black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/under_maintitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment System for Everyone"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0C8AC5"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@id/main_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/under_maintitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:backgroundTint="#41627C"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:backgroundTint="#41627C"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#0ED689"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/SignupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="16dp"
+        android:text="Don't have a account? "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <TextView
+        android:id="@+id/Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="84dp"
+        android:text="Signup"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/SignupText"
+        app:layout_constraintTop_toTopOf="@id/SignupText" />
+
+    <ProgressBar
+        android:id="@+id/Login_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

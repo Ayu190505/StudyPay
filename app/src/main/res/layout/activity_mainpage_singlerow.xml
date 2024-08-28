@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:elevation="5dp"
+    android:backgroundTint="#E1CE92"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/shopImg"
+            android:layout_width="119dp"
+            android:layout_height="178dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#785331"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/ownertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/shopImg"
+            android:text="This is owner"
+            android:textColor="#393535"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descriptiontext"
+            android:layout_width="251dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/ownertext"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/shopImg"
+            android:text="This is info"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:id="@+id/assignedto_text"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptiontext"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/shopImg"
+            android:text="This is teacher"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

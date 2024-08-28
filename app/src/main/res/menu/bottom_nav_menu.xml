@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/Home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        android:iconTint="#36356C"/>
+    <item android:id="@+id/createShops_navigation"
+        android:title="@string/createShops"
+        android:icon="@drawable/ic_shop"
+        android:iconTint="#36356C"/>
+
+    <item android:id="@+id/placeholder"
+        android:title=""/>
+
+    <item android:id="@+id/Lend_navigation"
+        android:title="@string/lend"
+        android:icon="@drawable/ic_lend"
+        android:iconTint="#36356C"/>
+    <item android:id="@+id/Pay_navigation"
+        android:title="@string/pay"
+        android:icon="@drawable/ic_pay"
+        android:iconTint="#36356C"/>
+
+</menu>

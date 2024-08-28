@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lend">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@mipmap/bg_paylend">
+
+        <ImageView
+            android:id="@+id/lend_titlePic"
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+            app:layout_constraintBottom_toTopOf="@id/lend_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/payment"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/lend_title"
+            android:layout_width="180dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Send Money"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@id/lend_sendto_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_titlePic" />
+
+        <EditText
+            android:id="@+id/lend_sendto_label"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginLeft="68dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Send to: "
+            app:layout_constraintBottom_toTopOf="@id/lend_amount_label"
+            app:layout_constraintLeft_toRightOf="@id/lend_sendto"
+            app:layout_constraintRight_toLeftOf="@id/lend_sendto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_title" />
+
+        <EditText
+            android:id="@+id/lend_sendto"
+            android:layout_width="218dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="44dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintBottom_toTopOf="@id/lend_amount"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/lend_sendto_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_titlePic" />
+
+        <EditText
+            android:id="@+id/lend_amount_label"
+            android:layout_width="81dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Amount: "
+            app:layout_constraintTop_toBottomOf="@+id/lend_sendto_label"
+            app:layout_constraintBottom_toTopOf="@id/lend_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/lend_amount"
+            />
+
+        <EditText
+            android:id="@+id/lend_amount"
+            android:layout_width="218dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:ems="10"
+            android:inputType="text|numberDecimal"
+            android:maxLength="50"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintBottom_toTopOf="@id/lend_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintLeft_toRightOf="@id/lend_amount_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_sendto" />
+
+
+        <Button
+            android:id="@+id/lend_button"
+            android:layout_width="145dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="224dp"
+            android:layout_marginLeft="224dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Lend"
+            app:layout_constraintBottom_toTopOf="@id/lend_title2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lend_amount" />
+
+        <EditText
+            android:id="@+id/lend_title2"
+            android:layout_width="186dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Pay your Debt"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@id/lend_debt_sendto_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_button" />
+
+        <EditText
+            android:id="@+id/lend_debt_sendto_label"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Send to: "
+            app:layout_constraintBottom_toTopOf="@id/lend_debtamount_label"
+            app:layout_constraintRight_toLeftOf="@id/lend_debt_sendto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_title2" />
+
+        <EditText
+            android:id="@+id/lend_debt_sendto"
+            android:layout_width="218dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintBottom_toTopOf="@id/lend_debtamount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/lend_debt_sendto_label"
+            app:layout_constraintTop_toBottomOf="@+id/lend_button" />
+
+        <EditText
+            android:id="@+id/lend_debtamount_label"
+            android:layout_width="81dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="1dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Amount: "
+            app:layout_constraintBottom_toTopOf="@id/lend_paydebt_button"
+            app:layout_constraintRight_toLeftOf="@id/lend_debtamount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lend_debt_sendto_label" />
+
+        <EditText
+            android:id="@+id/lend_debtamount"
+            android:layout_width="218dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:ems="10"
+            android:inputType="text|numberDecimal"
+            android:maxLength="50"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintBottom_toTopOf="@id/lend_paydebt_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintLeft_toRightOf="@id/lend_debtamount_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lend_debt_sendto" />
+
+        <Button
+            android:id="@+id/lend_paydebt_button"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:layout_width="145dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="219dp"
+            android:text="Pay Debt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lend_debtamount"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

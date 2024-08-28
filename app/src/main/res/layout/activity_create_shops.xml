@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/bg4"
+    tools:context=".CreateShops">
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#FFE22A"
+        app:fabCradleMargin="20dp"
+        app:fabCradleRoundedCornerRadius="50dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatButton"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_aba_vertical"
+        app:layout_anchor="@id/bottomAppBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp"
+
+        android:padding="15dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#785331"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toTopOf="@id/browse_profilePic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/browse_profilePic"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:layout_width="119dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Browse"
+            app:layout_constraintBottom_toTopOf="@id/shop_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profilePic" />
+
+        <EditText
+            android:id="@+id/shop_label"
+            android:layout_width="105dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="1dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Shop Name"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ShopTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/browse_profilePic"
+            app:layout_constraintBottom_toTopOf="@id/description_label"/>
+
+        <EditText
+            android:id="@+id/ShopTitle"
+            android:layout_width="241dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="90dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintLeft_toRightOf="@id/shop_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/browse_profilePic"
+            app:layout_constraintBottom_toTopOf="@id/createShop_description"/>
+
+        <EditText
+            android:id="@+id/description_label"
+            android:layout_width="105dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="1dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/createShop_description"
+            app:layout_constraintTop_toBottomOf="@+id/shop_label"
+            app:layout_constraintBottom_toTopOf="@id/teacherName_label"
+            />
+
+        <EditText
+            android:id="@+id/createShop_description"
+            android:layout_width="240dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colortextBackground"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintLeft_toRightOf="@id/description_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ShopTitle"
+            app:layout_constraintBottom_toTopOf="@id/teacherName"
+            android:maxLength="50"/>
+
+
+        <EditText
+            android:id="@+id/teacherName_label"
+            android:layout_width="102dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Teacher for Approval"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/teacherName"
+            app:layout_constraintTop_toBottomOf="@+id/description_label"
+            app:layout_constraintBottom_toTopOf="@id/upload_profilePic"/>
+
+        <EditText
+            android:id="@+id/teacherName"
+            android:layout_width="240dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintLeft_toRightOf="@id/teacherName_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createShop_description"
+            app:layout_constraintBottom_toTopOf="@id/upload_profilePic"/>
+
+        <Button
+            android:id="@+id/upload_profilePic"
+            android:backgroundTint="@android:color/holo_purple"
+            android:layout_width="149dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="70dp"
+            android:text="Send Approval"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teacherName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

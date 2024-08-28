@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Pay">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@mipmap/bg_paylend">
+
+        <ImageView
+            android:id="@+id/titlePic"
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+            app:layout_constraintBottom_toTopOf="@id/title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/payment"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="180dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Send Money"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@id/sendto_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlePic" />
+
+        <EditText
+            android:id="@+id/sendto_label"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginLeft="68dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Send to: "
+            app:layout_constraintBottom_toTopOf="@id/amount_label"
+            app:layout_constraintLeft_toRightOf="@id/sendto"
+            app:layout_constraintRight_toLeftOf="@id/sendto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <EditText
+            android:id="@+id/sendto"
+            android:layout_width="218dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginRight="44dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintBottom_toTopOf="@id/amount"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/sendto_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlePic" />
+
+        <EditText
+            android:id="@+id/amount_label"
+            android:layout_width="81dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="none"
+            android:text="Amount: "
+            app:layout_constraintTop_toBottomOf="@+id/sendto_label"
+            app:layout_constraintBottom_toTopOf="@id/pay_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/amount"
+            />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="218dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:ems="10"
+            android:inputType="text|numberDecimal"
+            android:maxLength="50"
+            android:textSize="24sp"
+            app:backgroundTint="#41627C"
+            app:layout_constraintBottom_toTopOf="@id/pay_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintLeft_toRightOf="@id/amount_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sendto" />
+
+        <Button
+            android:id="@+id/pay_button"
+            android:layout_width="145dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="350dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="Send Amount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amount"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

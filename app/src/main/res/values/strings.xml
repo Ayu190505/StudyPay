@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ABA PAY</string>
+    <string name="home">Home</string>
+    <string name="approveShops">Approve</string>
+    <string name="createShops">Create</string>
+    <string name="lend">Lend</string>
+    <string name="pay">Pay</string>
+</resources>

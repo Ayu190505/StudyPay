@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
+        <item name="android:colorBackground">#FDFDFD</item>
+        <item name="colorPrimary">#1E9ADF</item>
+        <item name="colorPrimaryDark">#00FFFFFF</item>
+        <item name="android:textColorHint">#303B75</item>
+        <item name="android:textColor">#FFC107</item>
+        <item name="android:textColorPrimary">#0B74F4</item>
+
+        <item name="colorSecondary">#FF003B</item>
+        <item name="colorAccent">#F82424</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+</resources>
