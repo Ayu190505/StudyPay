@@ -67,7 +67,8 @@ The concept for **StudyPay** was inspired by the inefficiencies in handling mone
 
 ## 🧱 Tech Stack
 
-- **Frontend:** Java, XML (Android Studio)
+- **Frontend:** Java, XML
+- **IDE:** Android Studio
 - **Backend:** Google Firebase (Authentication, Realtime Database)
 - **Design:** Figma (UI/UX prototyping)
 - **Version Control:** Git
